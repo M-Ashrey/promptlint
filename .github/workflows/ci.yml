@@ -23,5 +23,5 @@ jobs:
           pip install -e ".[dev]"
       - name: Run tests
         run: python -m pytest -q
-      - name: Self-lint prompt examples
-        run: python -m promptlint examples --max-severity error
+      - name: Self-lint the "good" example (must stay clean)
+        run: python -m promptlint examples/good.CLAUDE.md --max-severity error

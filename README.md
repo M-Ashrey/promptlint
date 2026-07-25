@@ -77,6 +77,29 @@ List every rule:
 promptlint --list-rules
 ```
 
+### Example output
+
+Running promptlint on a prompt file with real issues:
+
+```
+$ promptlint examples/bad.CLAUDE.md --max-severity error
+examples/bad.CLAUDE.md
+     3  warning  heading jumps from h1 to h3  heading-jump
+     4  warning  hedging phrase 'maybe' weakens the instruction  hedging
+     6  warning  hedging phrase 'sort of' weakens the instruction  hedging
+     8    error  unresolved placeholder 'TODO'  placeholder
+     9    error  unresolved placeholder '<INSERT_ERROR_POLICY>'  placeholder
+    10  warning  hedging phrase 'possibly' weakens the instruction  hedging
+    10    error  unresolved placeholder '{{API_KEY}}'  placeholder
+    10     info  trailing whitespace  trailing-whitespace
+    12  warning  hedging phrase 'perhaps' weakens the instruction  hedging
+9 finding(s) across 1 file(s)
+$ echo $?
+1
+```
+
+A well-written prompt file (`examples/good.CLAUDE.md`) lints clean and exits `0` — this pair is exactly what CI runs as a regression check on every push.
+
 ### Exit codes
 
 `promptlint` exits non-zero when a finding reaches `--max-severity` (default
@@ -143,6 +166,13 @@ CLI flags always override file config.
 Building an agent from scratch? My [claude-mcp-starter-kit](https://github.com/M-Ashrey/claude-mcp-starter-kit)
 is a free, minimal starting point for Claude/MCP projects — promptlint pairs
 well with it for keeping instruction files healthy.
+
+## Contributing
+
+Bug reports and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md)
+for how to add a rule and the project's guidelines, or open an issue at
+[github.com/M-Ashrey/promptlint/issues](https://github.com/M-Ashrey/promptlint/issues).
+See [SECURITY.md](SECURITY.md) to report a vulnerability privately.
 
 ## License
 
