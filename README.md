@@ -167,6 +167,10 @@ Building an agent from scratch? My [claude-mcp-starter-kit](https://github.com/M
 is a free, minimal starting point for Claude/MCP projects — promptlint pairs
 well with it for keeping instruction files healthy.
 
+## Support this work
+
+promptlint is free and MIT licensed. If it's useful, you can help keep it maintained through [GitHub Sponsors](https://github.com/sponsors/M-Ashrey) or [Ko-fi](https://ko-fi.com/ashrey122).
+
 ## Contributing
 
 Bug reports and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md)
