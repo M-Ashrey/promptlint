@@ -180,4 +180,4 @@ See [SECURITY.md](SECURITY.md) to report a vulnerability privately.
 
 ## License
 
-MIT (c) Mohamed Ashrey. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
